@@ -201,15 +201,15 @@ HANABI公式サイトと共通の既存Googleフォームを流用していま�
 
 将来コーポレート専用フォームに分離する場合は、**index.html** 内のお問い合わせセクションにあるCTAボタンの `href` を新しいフォームURLに差し替えてください(HTMLコメントで目印あり)。
 
-### 独自ドメイン移行時のSEO設定差し替え
-現在のSEOタグは GitHub Pages のURL( https://take-ichita.github.io/tyss-site/ )で設定しています。
-独自ドメインへ移行する際は、以下の箇所をすべて新ドメインに差し替えてください(各ファイルに `TODO` コメントで目印あり):
+### 独自ドメインとSEO設定
+サイトは独自ドメイン **https://www.tyss-co.jp/** で公開中です。
+- DNS: お名前.comで `www` の CNAMEレコード → `take-ichita.github.io`(メール用のMX・TXTレコードとは独立)
+- GitHub リポジトリの「Settings」→「Pages」でカスタムドメイン `www.tyss-co.jp` を設定済み
+- 全ページの canonical・OGP・JSON-LD・robots.txt・sitemap.xml は本番URLに設定済み
 
-1. **index.html**: `<link rel="canonical">`、OGPの `og:url`・`og:image`、JSON-LD内の `url`
-2. **robots.txt**: `Sitemap:` のURL
-3. **sitemap.xml**: `<loc>` のURL
-4. GitHub リポジトリの「Settings」→「Pages」でカスタムドメインを設定
-5. 移行後、Google Search Console にサイトを登録して sitemap.xml を送信
+残タスク:
+1. HTTPS証明書の発行完了後、Pages設定で「Enforce HTTPS」を有効化
+2. Google Search Console にサイトを登録して sitemap.xml を送信
 
 ## 📊 パフォーマンス
 

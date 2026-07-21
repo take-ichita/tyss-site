@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: 独自ドメイン移行時は<loc>のURLを差し替えてください -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://take-ichita.github.io/tyss-site/</loc>
+    <loc>https://www.tyss-co.jp/</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://take-ichita.github.io/tyss-site/terms.html</loc>
+    <loc>https://www.tyss-co.jp/terms.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://take-ichita.github.io/tyss-site/privacy.html</loc>
+    <loc>https://www.tyss-co.jp/privacy.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
