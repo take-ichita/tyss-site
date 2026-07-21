@@ -3,13 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="株式会社TYSSは東南アジア向け輸出ビジネス、Shopeeツール開発、システム開発を展開しています。日本製品を東南アジア市場へ届けるパートナー。">
-    <title>株式会社TYSS - 東南アジア輸出ビジネス & ITソリューション</title>
+    <meta name="description" content="株式会社TYSSは東南アジア向け輸出ビジネス、Shopeeツール「HANABI」「HAKONAVI」の開発、AI業務効率化コンサルティング、システム開発を展開。物販とAI・ITの両面からビジネス成長を支援します。">
+    <title>株式会社TYSS - 東南アジア輸出ビジネス & AIコンサルティング・システム開発</title>
+
+    <!-- TODO: 独自ドメイン移行時は以下のcanonical・OGP内のURLをすべて差し替えてください -->
+    <link rel="canonical" href="https://take-ichita.github.io/tyss-site/">
+
+    <!-- OGP -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="株式会社TYSS">
+    <meta property="og:title" content="株式会社TYSS - 東南アジア輸出ビジネス & AIコンサルティング・システム開発">
+    <meta property="og:description" content="東南アジア向け輸出ビジネス、Shopeeツール「HANABI」「HAKONAVI」の開発、AI業務効率化コンサルティング、システム開発を展開。物販とAI・ITの両面からビジネス成長を支援します。">
+    <meta property="og:url" content="https://take-ichita.github.io/tyss-site/">
+    <meta property="og:image" content="https://take-ichita.github.io/tyss-site/images/ogp.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- 構造化データ(検索エンジン向け企業情報) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "株式会社TYSS",
+        "url": "https://take-ichita.github.io/tyss-site/",
+        "description": "東南アジア向け輸出ビジネス、Shopeeツール「HANABI」「HAKONAVI」の開発、AI業務効率化コンサルティング、システム開発を展開する企業",
+        "knowsAbout": ["越境EC", "Shopee", "東南アジア輸出", "AI業務効率化", "AIコンサルティング", "業務効率化コンサルティング", "システム開発", "HANABI", "HAKONAVI"]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -42,6 +71,10 @@
         <div class="hero-content">
             <div class="container">
                 <div class="hero-text">
+                    <div class="hero-badge fade-in-up">
+                        <i class="fas fa-award"></i>
+                        Claude Partner Network 参加企業
+                    </div>
                     <h2 class="hero-subtitle fade-in-up">日本から東南アジアへ</h2>
                     <h1 class="hero-title fade-in-up delay-1">
                         越境ECで広がる<br>
@@ -49,8 +82,8 @@
                     </h1>
                     <p class="hero-description fade-in-up delay-2">
                         株式会社TYSSは、東南アジア市場への輸出ビジネスを中心に、<br>
-                        Shopee販売支援ツールの開発、EC関連システム開発まで、<br>
-                        物販とITの両面からお客様のビジネス成長をサポートします。
+                        Shopee販売支援ツールの開発、AIを活用した業務効率化コンサルティング、<br>
+                        システム開発と販売コンサルティングまで、物販とAI・ITの両面からビジネス成長を支援します。
                     </p>
                     <div class="hero-buttons fade-in-up delay-3">
                         <a href="#business" class="btn btn-primary">事業内容を見る</a>
@@ -78,7 +111,7 @@
                 <div class="business-card main-business">
                     <div class="business-card-badge">メイン事業</div>
                     <div class="business-card-image">
-                        <img src="images/hero-export-business.png" alt="東南アジア輸出ビジネス">
+                        <img src="images/hero-export-business.jpg" alt="東南アジア輸出ビジネス">
                         <div class="business-card-overlay">
                             <i class="fas fa-ship"></i>
                         </div>
@@ -103,7 +136,7 @@
                 <!-- Sub Business 1 -->
                 <div class="business-card">
                     <div class="business-card-image">
-                        <img src="images/hanabi-tool.jpg" alt="Shopeeツール HANABI">
+                        <img src="images/hanabi-tool.jpg" alt="自社プロダクト HANABI・HAKONAVI">
                         <div class="business-card-overlay">
                             <i class="fas fa-tools"></i>
                         </div>
@@ -111,23 +144,54 @@
                     <div class="business-card-content">
                         <h3 class="business-card-title">
                             <i class="fas fa-chart-line"></i>
-                            Shopeeツール「HANABI」開発
+                            自社プロダクト開発
                         </h3>
                         <p class="business-card-description">
-                            Shopee販売者向けの業務効率化ツール「HANABI」を自社開発。実際の物販経験から生まれたニーズを形にし、在庫管理、価格最適化、売上分析などの機能を提供しています。
+                            実際の物販経験から生まれたニーズを形にし、Shopee販売者向けのツール「HANABI」「HAKONAVI」を自社開発・提供しています。各製品の詳細や開発事例は、以下のリンクからご覧ください。
+                        </p>
+                        <div class="business-links">
+                            <a href="https://hanabi.marketvalleys.com/" target="_blank" rel="noopener" class="business-link">
+                                HANABI公式サイト <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://hanabi.marketvalleys.com/#hako" target="_blank" rel="noopener" class="business-link">
+                                HAKONAVI <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://hanabi.marketvalleys.com/case-study-a.html" target="_blank" rel="noopener" class="business-link">
+                                開発事例インタビュー <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub Business 2: AI業務効率化コンサルティング -->
+                <div class="business-card">
+                    <div class="business-card-badge badge-focus">注力事業</div>
+                    <div class="business-card-image business-card-image-ai">
+                        <i class="fas fa-robot ai-card-icon"></i>
+                        <div class="business-card-overlay">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="business-card-content">
+                        <h3 class="business-card-title">
+                            <i class="fas fa-robot"></i>
+                            AI業務効率化コンサルティング
+                        </h3>
+                        <p class="business-card-description">
+                            生成AIを業務に取り入れたい経営者の皆様に向けて、現状分析から改善のご提案、運用定着まで一貫してサポート。自社の開発・業務でAIを日常的に使い込んでいるからこそ、物販に限らず一般的な業務の効率化まで、現実に機能するご提案ができます。
                         </p>
                         <ul class="business-features">
-                            <li><i class="fas fa-check-circle"></i>販売データの可視化と分析</li>
-                            <li><i class="fas fa-check-circle"></i>在庫管理の自動化</li>
-                            <li><i class="fas fa-check-circle"></i>競合価格モニタリング</li>
+                            <li><i class="fas fa-check-circle"></i>経営者層向けのAI活用診断・改善提案</li>
+                            <li><i class="fas fa-check-circle"></i>物販から一般業務まで幅広い効率化に対応</li>
+                            <li><i class="fas fa-check-circle"></i>システム構築と組み合わせた一体提案</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Sub Business 2 -->
+                <!-- Sub Business 3: システム開発・コンサルティング -->
                 <div class="business-card">
                     <div class="business-card-image">
-                        <img src="images/system-development.jpg" alt="システム開発サービス">
+                        <img src="images/system-development.jpg" alt="システム開発・コンサルティング">
                         <div class="business-card-overlay">
                             <i class="fas fa-laptop-code"></i>
                         </div>
@@ -135,15 +199,15 @@
                     <div class="business-card-content">
                         <h3 class="business-card-title">
                             <i class="fas fa-code"></i>
-                            システム開発サービス
+                            システム開発・コンサルティング
                         </h3>
                         <p class="business-card-description">
-                            物販で培ったノウハウをIT化し、EC事業者様向けのシステム開発を提供。自社ECサイト構築、ツール開発マネジメント、クラウドソリューションなど、幅広いITサービスを展開しています。
+                            物販で培ったノウハウをIT化し、システム開発から販売戦略のコンサルティングまでを一体でご提供。ECサイト構築や業務ツール開発に加え、物販とITの両面からビジネス課題の解決を支援します。
                         </p>
                         <ul class="business-features">
-                            <li><i class="fas fa-check-circle"></i>ECサイト構築・運用支援</li>
-                            <li><i class="fas fa-check-circle"></i>業務効率化ツール開発</li>
-                            <li><i class="fas fa-check-circle"></i>システム開発コンサルティング</li>
+                            <li><i class="fas fa-check-circle"></i>ECサイト・業務システムの開発</li>
+                            <li><i class="fas fa-check-circle"></i>物販×AIの販売コンサルティング</li>
+                            <li><i class="fas fa-check-circle"></i>システム導入から運用までの伴走支援</li>
                         </ul>
                     </div>
                 </div>
@@ -163,50 +227,42 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-box"></i>
-                    </div>
-                    <h3>越境EC販売代行</h3>
-                    <p>東南アジア市場での販売をトータルサポート。商品選定から出品、配送、カスタマーサポートまで一貫して対応します。</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3>Shopee販売支援</h3>
-                    <p>自社開発ツール「HANABI」を活用し、データ分析と販売戦略の最適化をサポート。売上向上を実現します。</p>
+                    <p>自社開発ツール「HANABI」「HAKONAVI」を活用し、Shopee販売の運用をトータルでサポートします。</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>ECサイト構築</h3>
-                    <p>自社ECサイトの立ち上げから運用まで、技術面・戦略面の両面からサポート。ビジネス成長を加速させます。</p>
+                    <h3>AI業務効率化コンサルティング</h3>
+                    <p>経営者層に向けて、生成AIを活用した社内運用の改善策をご提案。業務の棚卸しからAI活用の定着まで伴走します。</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3>業務ツール開発</h3>
-                    <p>EC事業の効率化を実現する各種ツールを開発。在庫管理、価格調整、レポート作成などの業務を自動化します。</p>
+                    <h3>AI×システム導入支援</h3>
+                    <p>AIと業務システムを組み合わせた、より良いソリューションを設計・構築。既存システムへのAI連携もサポートします。</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-wand-magic-sparkles"></i>
                     </div>
-                    <h3>クラウドソリューション</h3>
-                    <p>クラウド技術を活用したスケーラブルなシステム構築。多販路展開を支援するwebシステムを提供します。</p>
+                    <h3>業務効率化サポート</h3>
+                    <p>物販に限らず、資料作成や定型業務など一般的な業務の効率化もサポート。AIツールの選定から運用ルールの整備まで支援します。</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>物販・ITコンサルティング</h3>
-                    <p>物販とITの両面から戦略的なアドバイスを提供。ビジネス課題の解決とシステム導入を支援します。</p>
+                    <h3>システム開発・コンサルティング</h3>
+                    <p>ECサイト構築、業務ツール開発、クラウド構築などのシステム開発と、物販×AIの販売コンサルティングを一体でご提供します。</p>
                 </div>
             </div>
         </div>
@@ -253,6 +309,31 @@
                         <p>単なるツール提供やシステム開発だけでなく、お客様のビジネス成長に寄り添う伴走型のサポートを提供。長期的なパートナーとして成功を共に目指します。</p>
                     </div>
                 </div>
+
+                <div class="strength-item">
+                    <div class="strength-number">05</div>
+                    <div class="strength-content">
+                        <h3><i class="fas fa-robot"></i>技術力に裏打ちされたAI活用</h3>
+                        <p>生成AIの普及により、AIを「使うだけ」の支援も増えています。当社はシステム開発で培った技術力を土台にAIを活用しているため、システム連携や運用設計まで見据えた、実際の業務で機能するご提案ができます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partnership" id="partnership">
+        <div class="container">
+            <div class="partnership-content">
+                <div class="partnership-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Claude Partner Network</span>
+                </div>
+                <h2 class="partnership-title">Anthropic「Claude Partner Network」参加企業</h2>
+                <p class="partnership-description">
+                    株式会社TYSSは、AI「Claude」を開発するAnthropic社のClaude Partner Networkに参加しています。<br>
+                    最新のAI技術とエンジニアリングの知見を、お客様の業務効率化とシステム開発に還元します。
+                </p>
             </div>
         </div>
     </section>
@@ -268,9 +349,10 @@
 
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>初回コンサルティング</h3>
+                    <h3>まずはお気軽にご相談ください</h3>
                     <p class="contact-description">
-                        東南アジア輸出ビジネス、Shopeeツール活用、システム開発に関するご相談を承ります。<br>
+                        東南アジア輸出ビジネス、Shopeeツール活用、AI業務効率化、<br>
+                        システム開発・コンサルティングに関するご相談を承ります。<br>
                         まずはお気軽にお問い合わせください。
                     </p>
                     
@@ -284,69 +366,44 @@
                                 <ul>
                                     <li>東南アジア市場への参入相談</li>
                                     <li>Shopee販売戦略の立案</li>
+                                    <li>AIを活用した業務効率化・社内運用の改善</li>
+                                    <li>物販に限らない一般業務の効率化</li>
                                     <li>自社ツール・ECサイトの開発</li>
-                                    <li>ツール開発のマネジメント支援</li>
-                                    <li>物販業務の効率化提案</li>
+                                    <li>システム開発と販売戦略のコンサルティング</li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-item-content">
-                                <h4>対応時間</h4>
-                                <p>平日 9:00 - 18:00<br>（土日祝日を除く）</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">お名前 <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+                <div class="contact-cta-card">
+                    <div class="contact-cta-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3>お問い合わせフォーム</h3>
+                    <p class="contact-cta-description">
+                        お問い合わせはGoogleフォームにて受け付けています。<br>
+                        下のボタンからフォームを開き、必要事項をご記入ください。
+                    </p>
 
-                        <div class="form-group">
-                            <label for="company">会社名</label>
-                            <input type="text" id="company" name="company">
-                        </div>
+                    <ol class="contact-cta-steps">
+                        <li><span class="step-number">1</span>フォームに入力(1〜2分)</li>
+                        <li><span class="step-number">2</span>内容を確認</li>
+                        <li><span class="step-number">3</span>担当者よりメールでご返信</li>
+                    </ol>
 
-                        <div class="form-group">
-                            <label for="email">メールアドレス <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
+                    <!-- HANABI公式サイトと共通の問い合わせフォーム。コーポレート専用フォームを作る場合はhrefを差し替えてください -->
+                    <a href="https://forms.gle/Wei9GRR1WXy8iVwd7" target="_blank" rel="noopener" class="btn btn-primary btn-cta">
+                        <i class="fas fa-paper-plane"></i>
+                        お問い合わせフォームを開く
+                        <i class="fas fa-arrow-up-right-from-square btn-cta-external"></i>
+                    </a>
 
-                        <div class="form-group">
-                            <label for="phone">電話番号</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">お問い合わせ種別 <span class="required">*</span></label>
-                            <select id="subject" name="subject" required>
-                                <option value="">選択してください</option>
-                                <option value="export">東南アジア輸出ビジネス</option>
-                                <option value="hanabi">Shopeeツール「HANABI」</option>
-                                <option value="development">システム開発</option>
-                                <option value="consulting">コンサルティング</option>
-                                <option value="other">その他</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane"></i>
-                            送信する
-                        </button>
-                    </form>
+                    <p class="contact-cta-note">
+                        ※ 外部サイト(Googleフォーム)が開きます。<br>
+                        ※ ご返信までお時間をいただく場合があります。
+                    </p>
                 </div>
             </div>
         </div>
@@ -359,7 +416,7 @@
                 <div class="footer-section">
                     <h3 class="footer-title">株式会社TYSS</h3>
                     <p class="footer-description">
-                        東南アジア輸出ビジネスとITソリューションで<br>
+                        東南アジア輸出ビジネスとAI・ITソリューションで<br>
                         お客様のビジネス成長を支援します
                     </p>
                 </div>
@@ -368,9 +425,11 @@
                     <h4>サービス</h4>
                     <ul class="footer-links">
                         <li><a href="#business">東南アジア輸出</a></li>
-                        <li><a href="#business">Shopeeツール開発</a></li>
-                        <li><a href="#business">システム開発</a></li>
-                        <li><a href="#services">サービス一覧</a></li>
+                        <li><a href="#business">AI業務効率化コンサルティング</a></li>
+                        <li><a href="#business">システム開発・コンサルティング</a></li>
+                        <li><a href="https://hanabi.marketvalleys.com/" target="_blank" rel="noopener">HANABI公式サイト</a></li>
+                        <li><a href="https://hanabi.marketvalleys.com/#hako" target="_blank" rel="noopener">HAKONAVI</a></li>
+                        <li><a href="https://hanabi.marketvalleys.com/case-study-a.html" target="_blank" rel="noopener">開発事例インタビュー</a></li>
                     </ul>
                 </div>
 
@@ -379,16 +438,16 @@
                     <ul class="footer-links">
                         <li><a href="#strengths">選ばれる理由</a></li>
                         <li><a href="#contact">お問い合わせ</a></li>
-                        <li><a href="https://tyssichi.wixsite.com/tyss/privacy" target="_blank">プライバシーポリシー</a></li>
-                        <li><a href="https://tyssichi.wixsite.com/tyss/kiyaku" target="_blank">利用規約</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                        <li><a href="https://tyssichi.wixsite.com/tyss/keihin" target="_blank">景品表示法に基づく表示</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>お問い合わせ</h4>
                     <p class="footer-contact">
-                        平日 9:00 - 18:00<br>
-                        <a href="#contact">お問い合わせフォーム</a>
+                        <a href="https://forms.gle/Wei9GRR1WXy8iVwd7" target="_blank" rel="noopener">お問い合わせフォーム</a>
                     </p>
                 </div>
             </div>
@@ -400,5 +459,5 @@
     </footer>
 
     <script src="js/main.js"></script>
-<script src="https://www.genspark.ai/sandbox_inspect.js"></script></body>
+</body>
 </html>

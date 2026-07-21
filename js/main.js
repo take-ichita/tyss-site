@@ -60,19 +60,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     
     const navbar = document.getElementById('navbar');
-    let lastScrollTop = 0;
-    
+
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         // Add shadow when scrolled
         if (scrollTop > 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        
-        lastScrollTop = scrollTop;
     });
     
     // ==========================================
@@ -100,129 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
     animateElements.forEach(el => {
         observer.observe(el);
     });
-    
-    // ==========================================
-    // Contact Form Handling
-    // ==========================================
-    
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                company: document.getElementById('company').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Validate form
-            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-                showNotification('必須項目を入力してください。', 'error');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(formData.email)) {
-                showNotification('有効なメールアドレスを入力してください。', 'error');
-                return;
-            }
-            
-            // Show loading state
-            const submitBtn = contactForm.querySelector('.btn-submit');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission (in production, this would be an API call)
-            setTimeout(() => {
-                console.log('Form submitted:', formData);
-                
-                // Show success message
-                showNotification('お問い合わせありがとうございます。担当者より折り返しご連絡いたします。', 'success');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Reset button
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
-        });
-    }
-    
-    // ==========================================
-    // Notification System
-    // ==========================================
-    
-    function showNotification(message, type = 'info') {
-        // Remove existing notification
-        const existingNotification = document.querySelector('.notification');
-        if (existingNotification) {
-            existingNotification.remove();
-        }
-        
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-            <div class="notification-content">
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
-                <span>${message}</span>
-            </div>
-        `;
-        
-        // Add styles
-        notification.style.cssText = `
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            background: ${type === 'success' ? '#28a745' : type === 'error' ? '#dc3545' : '#17a2b8'};
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            z-index: 10000;
-            animation: slideInRight 0.3s ease, slideOutRight 0.3s ease 3.7s;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            max-width: 400px;
-        `;
-        
-        document.body.appendChild(notification);
-        
-        // Remove after 4 seconds
-        setTimeout(() => {
-            notification.remove();
-        }, 4000);
-    }
-    
-    // ==========================================
-    // Counter Animation for Stats
-    // ==========================================
-    
-    function animateCounter(element, target, duration = 2000) {
-        const start = 0;
-        const increment = target / (duration / 16);
-        let current = start;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, 16);
-    }
     
     // ==========================================
     // Parallax Effect for Hero
@@ -357,28 +231,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes slideInRight {
-        from {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    @keyframes slideOutRight {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-    }
-    
     .animate-in {
         animation: fadeInUp 0.8s ease forwards;
     }

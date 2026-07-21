@@ -215,7 +215,7 @@ a {
     background: linear-gradient(135deg, #004E89 0%, #1A6FA8 100%);
     background-image: 
         linear-gradient(135deg, rgba(0, 78, 137, 0.95) 0%, rgba(26, 111, 168, 0.9) 100%),
-        url('../images/hero-export-business.png');
+        url('../images/hero-export-business.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -250,6 +250,26 @@ a {
 
 .hero-text {
     max-width: 900px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: var(--text-white);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+}
+
+.hero-badge i {
+    color: var(--accent-orange);
 }
 
 .hero-subtitle {
@@ -429,6 +449,7 @@ a {
 }
 
 .business-card {
+    position: relative;
     background-color: var(--bg-white);
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -458,6 +479,10 @@ a {
     font-size: 0.9rem;
     z-index: 10;
     box-shadow: var(--shadow-lg);
+}
+
+.business-card-badge.badge-focus {
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
 }
 
 .business-card-image {
@@ -544,6 +569,52 @@ a {
 .business-features i {
     color: var(--accent-green);
     font-size: 1rem;
+}
+
+.business-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.business-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius-lg);
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.business-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+.business-link i {
+    font-size: 0.75rem;
+}
+
+/* AI事業カード(写真素材の代わりにグラデーション背景を使用) */
+.business-card-image-ai {
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-light) 55%, var(--primary-color) 130%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-card-icon {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.9);
+    transition: var(--transition-slow);
+}
+
+.business-card:hover .ai-card-icon {
+    transform: scale(1.05);
 }
 
 /* ==========================================
@@ -666,6 +737,66 @@ a {
 }
 
 /* ==========================================
+   Partnership Section
+   ========================================== */
+.partnership {
+    padding: var(--spacing-lg) 0;
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-color) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.partnership::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(255, 107, 53, 0.15), transparent 50%);
+}
+
+.partnership-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.partnership-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, var(--accent-orange), var(--primary-color));
+    color: var(--text-white);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 1.5rem;
+}
+
+.partnership-badge i {
+    font-size: 1.2rem;
+}
+
+.partnership-title {
+    font-size: 1.8rem;
+    color: var(--text-white);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.partnership-description {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+/* ==========================================
    Contact Section
    ========================================== */
 .contact {
@@ -747,61 +878,168 @@ a {
     margin-right: 0.5rem;
 }
 
-.contact-form-wrapper {
+.contact-cta-card {
     background-color: var(--bg-light);
     padding: 2.5rem;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
+    border: 2px solid rgba(255, 107, 53, 0.15);
+    text-align: center;
 }
 
-.contact-form {
-    display: grid;
-    gap: 1.5rem;
+.contact-cta-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.form-group {
-    display: grid;
-    gap: 0.5rem;
+.contact-cta-icon i {
+    font-size: 2rem;
+    color: var(--text-white);
 }
 
-.form-group label {
-    font-weight: 600;
+.contact-cta-card h3 {
+    font-size: 1.5rem;
     color: var(--text-primary);
-    font-size: 0.95rem;
+    margin-bottom: 1rem;
 }
 
-.required {
-    color: var(--accent-red);
+.contact-cta-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 0.875rem 1rem;
-    border: 2px solid var(--bg-gray);
-    border-radius: var(--radius-md);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition-normal);
+.contact-cta-steps {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    text-align: left;
+    max-width: 340px;
+    margin: 0 auto 2rem;
+}
+
+.contact-cta-steps li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.btn-cta {
+    font-size: 1.1rem;
+    padding: 1.1rem 2.5rem;
+}
+
+.btn-cta-external {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.contact-cta-note {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* ==========================================
+   Legal Pages (利用規約・プライバシーポリシー)
+   ========================================== */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-mark {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+.legal-main {
+    padding: 9rem 0 5rem;
     background-color: var(--bg-white);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+.legal-container {
+    max-width: 860px;
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+.legal-main h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
 }
 
-.btn-submit {
-    justify-self: start;
-    margin-top: 1rem;
+.legal-main h2 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.legal-main h3 {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-main p,
+.legal-main li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.legal-main ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-main a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.legal-date {
+    margin-top: 3rem;
+    text-align: right;
+    color: var(--text-light);
+}
+
+.legal-footer-bottom a {
+    color: var(--accent-orange);
+    text-decoration: underline;
 }
 
 /* ==========================================
@@ -883,9 +1121,15 @@ a {
     .business-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .main-business {
         grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .business-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -910,6 +1154,28 @@ a {
     
     .mobile-menu-toggle {
         display: flex;
+    }
+
+    /* 法務ページはハンバーガーメニューを持たないため、リンクをそのまま表示する */
+    .navbar-legal .nav-menu {
+        position: static;
+        flex-direction: row;
+        transform: none;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
     }
     
     .hero-title {
@@ -941,7 +1207,11 @@ a {
     .section-title {
         font-size: 2rem;
     }
-    
+
+    .partnership-title {
+        font-size: 1.4rem;
+    }
+
     .container {
         padding: 0 1.5rem;
     }
@@ -958,7 +1228,7 @@ a {
     
     .business-card-content,
     .service-card,
-    .contact-form-wrapper {
+    .contact-cta-card {
         padding: 1.5rem;
     }
 }

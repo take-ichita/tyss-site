@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: 独自ドメイン移行時はSitemapのURLを差し替えてください
+Sitemap: https://take-ichita.github.io/tyss-site/sitemap.xml
