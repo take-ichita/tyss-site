@@ -287,6 +287,16 @@ a {
     margin-bottom: 1.5rem;
 }
 
+.hero-title-company {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .hero-title .highlight {
     background: linear-gradient(135deg, var(--accent-orange), var(--primary-color));
     -webkit-background-clip: text;
@@ -1066,6 +1076,160 @@ a {
 }
 
 /* ==========================================
+   Company Profile
+   ========================================== */
+.company {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-light);
+}
+
+.company-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.company-lead {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.company-table {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.company-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border-bottom: 1px solid var(--bg-gray);
+}
+
+.company-row:last-child {
+    border-bottom: none;
+}
+
+.company-row dt {
+    padding: 1.25rem 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    background-color: rgba(0, 78, 137, 0.04);
+    border-right: 1px solid var(--bg-gray);
+}
+
+.company-row dd {
+    padding: 1.25rem 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.company-row dd a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.company-row dd a:hover {
+    color: var(--primary-color);
+}
+
+.company-list {
+    list-style: none;
+}
+
+.company-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.company-list li:last-child {
+    margin-bottom: 0;
+}
+
+.company-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+/* ==========================================
+   FAQ
+   ========================================== */
+.faq {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-white);
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.faq-item {
+    background-color: var(--bg-light);
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+}
+
+.faq-question {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+}
+
+.faq-question::before {
+    content: 'Q';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.faq-answer {
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    padding-left: 2rem;
+}
+
+.faq-answer::before {
+    content: 'A';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+}
+
+.faq-answer a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.faq-answer a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================
    Responsive Design
    ========================================== */
 @media (min-width: 768px) {
@@ -1086,6 +1250,14 @@ a {
 
     .business-grid > .business-card:nth-child(n+3) {
         grid-column: span 2;
+    }
+}
+
+/* ハンバーガー化する直前の幅で項目間隔を詰める */
+@media (max-width: 1080px) and (min-width: 769px) {
+    .nav-menu {
+        gap: 1.25rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -1170,6 +1342,42 @@ a {
 
     .container {
         padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* PC向けの改行はモバイルでは無効化 */
+    .hero-description br,
+    .partnership-description br,
+    .contact-description br,
+    .contact-cta-description br,
+    .footer-description br,
+    .contact-cta-note br {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-row {
+        grid-template-columns: 1fr;
+    }
+
+    .company-row dt {
+        border-right: none;
+        border-bottom: 1px solid var(--bg-gray);
+        padding: 0.9rem 1.25rem;
+    }
+
+    .company-row dd {
+        padding: 1rem 1.25rem;
+    }
+
+    .hero-title-company {
+        font-size: 0.95rem;
+    }
+
+    .faq-item {
+        padding: 1.25rem;
     }
 }
 

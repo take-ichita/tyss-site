@@ -95,11 +95,15 @@
 - 画像レイジーロード
 
 ### 10. **SEO対策**
-- title / meta description の最適化
+- title / meta description の最適化(主要キーワード「東南アジア輸出」「越境EC」「AI業務効率化」「システム開発」を含む)
 - canonical URL の設定
-- OGP(og:title, og:description, og:image など)+ Twitterカード
-- 構造化データ(JSON-LD の Organization スキーマ)
-- robots.txt / sitemap.xml
+- `meta robots` に `max-snippet:-1` / `max-image-preview:large` を指定(AI検索・リッチリザルトでの引用を許可)
+- OGP(og:image の width/height/alt まで指定)+ Twitterカード(title/description/image)
+- 構造化データ(JSON-LD の `@graph`。Organization / WebSite / WebPage / BreadcrumbList / FAQPage / OfferCatalog を相互参照)
+- 見出し階層の整理(h1は1つ、ヒーローのサブコピーは `<p>` 化)、`<main>` ランドマークと `aria-labelledby`
+- 画像の `alt` / `width` / `height` / `loading` / `decoding` 指定(CLS対策)
+- ヒーロー画像の `preload`、CDNへの `preconnect`
+- robots.txt / sitemap.xml / 404.html(noindex)
 - SVGファビコン
 
 ### 11. **レスポンシブデザイン**
@@ -107,6 +111,15 @@
 - タブレット（768px - 1199px）
 - モバイル（〜767px）
 - 480px以下の小型デバイス対応
+
+### 12. **LLMO対策(生成AI・AI検索向け)**
+- **llms.txt**: サイト全体の要約をプレーンテキストで提供。`<head>` から `rel="alternate" type="text/plain"` で参照
+- **robots.txt でAIクローラーを明示許可**: GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-User / Claude-SearchBot / PerplexityBot / Google-Extended / Applebot-Extended / CCBot / meta-externalagent など
+- **FAQセクション + FAQPage構造化データ**: 9問。JSON-LDの文言はページ表示テキストと完全一致させること(Googleの要件。片方だけ直さない)
+- **会社概要セクション**: `dl` によるキー・バリュー構造で企業実体を機械可読に提示
+- 各説明文を「株式会社TYSSは〜する企業です」のような、単体で引用できる自己完結した文体で記述
+
+> **注意**: FAQの本文を編集した場合は、`index.html` の `<head>` 内 JSON-LD (`FAQPage` の `mainEntity`) も同じ文言に更新すること。
 
 ## 🎨 デザイン特徴
 
@@ -154,8 +167,10 @@ project/
 ├── favicon.svg                  # ファビコン(会社ロゴ入りSVG)
 ├── favicon-32.png               # ファビコン(PNGフォールバック)
 ├── apple-touch-icon.png         # iOS向けアイコン(180x180)
-├── robots.txt                   # クローラー向け設定
+├── robots.txt                   # クローラー向け設定(AIクローラーの許可を含む)
 ├── sitemap.xml                  # サイトマップ
+├── llms.txt                     # LLM/AI検索向けのサイト要約(LLMO)
+├── 404.html                     # カスタム404ページ(noindex)
 ├── .nojekyll                    # GitHub PagesのJekyll処理を無効化
 ├── .gitignore                   # Git管理から除外するファイル
 └── README.md
@@ -177,7 +192,12 @@ project/
 **index.html** の以下のセクションを編集(行番号はズレるためセクションIDで検索してください)：
 - ヒーローセクション: `<section class="hero" id="home">`
 - 事業内容: `<section class="business-overview" id="business">`
+- 会社概要: `<section class="company" id="company">`
+- よくあるご質問: `<section class="faq" id="faq">`
 - お問い合わせ情報: `<section class="contact" id="contact">`
+
+会社概要とFAQを編集した場合は、`<head>` 内のJSON-LD(`Organization` / `FAQPage`)も同じ内容に更新してください。
+FAQは**表示テキストと構造化データの文言が一致していること**がGoogleのリッチリザルトの要件です。
 
 ### カラースキームの変更
 **css/style.css** の冒頭にある`:root`変数を編集：
@@ -209,7 +229,10 @@ HANABI公式サイトと共通の既存Googleフォームを流用していま�
 
 残タスク:
 1. HTTPS証明書の発行完了後、Pages設定で「Enforce HTTPS」を有効化
-2. Google Search Console にサイトを登録して sitemap.xml を送信
+2. Google Search Console にサイトを登録して sitemap.xml を送信(Bing Webmaster Toolsも推奨)
+3. 会社概要に **所在地・設立年月・資本金** を追記し、あわせて JSON-LD の Organization に
+   `address` / `foundingDate` を追加する(検索エンジン・AIによる企業実体の認識に最も効く)
+4. 公式SNSや外部の企業データベース(登記情報サービス等)のURLを JSON-LD の `sameAs` に追加する
 
 ## 📊 パフォーマンス
 
@@ -300,6 +323,6 @@ HANABI公式サイトと共通の既存Googleフォームを流用していま�
 ---
 
 **制作日**: 2026年2月5日  
-**最終更新**: 2026年7月21日(オリジナル商品プロデュース・AI業務効率化コンサルティングのカード画像を追加)  
-**バージョン**: 1.5.1  
+**最終更新**: 2026年8月7日(SEO/LLMO対策の全面強化: 構造化データ@graph化、FAQ・会社概要セクション追加、llms.txt・404.html追加、AIクローラー許可)
+**バージョン**: 1.6.0
 **クライアント**: 株式会社TYSS
