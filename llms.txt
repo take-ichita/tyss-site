@@ -41,6 +41,7 @@
 - [HANABI公式サイト](https://hanabi.marketvalleys.com/): Shopee販売支援ツール HANABI / HAKONAVI の機能・料金・FAQ
 - [HAKONAVI](https://hanabi.marketvalleys.com/#hako): 有在庫販売向けの在庫・利益管理システム
 - [導入事例インタビュー](https://hanabi.marketvalleys.com/case-study-a.html): HAKONAVI導入セラーへの一問一答
+- [お客様実績インタビュー（AI導入支援）](https://hanabi.marketvalleys.com/case-study-acd.html): クラファンLP制作「A.C.D」小川さんとの対談。酒蔵向けの集客の仕組みを相談の翌日に試作、約1週間で本番化
 
 ## お問い合わせ
 
